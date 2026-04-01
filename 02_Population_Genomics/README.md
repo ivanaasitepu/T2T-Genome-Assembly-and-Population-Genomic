@@ -9,7 +9,7 @@ All GVCF files from each sample are merged using DPGT (v1.4.2) into a multi-samp
 
 | Step | Tool | Purpose |
 |------|------|---------|
-| Alignment | BWA-MEM | Map reads to reference |
+| Alignment | ZBOLT| Map reads to reference |
 | Variant calling | ZBOLT | Per-sample GVCF generation |
 | Joint genotyping | DPGT | Multi-sample variant calling |
 | Filtering | GATK | Variant quality control |
