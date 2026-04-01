@@ -3,3 +3,24 @@ This study employs population genomics to investigate population structure and l
 The stage of mapping and calling variants ensures verified quality by mapping clean reads to the reference genome and detecting genetic variations, particularly single-nucleotide polymorphisms (SNPs) and insertions/deletions (InDels). The mapping is performed using MegaBOLT (https://mgi-tech.eu/bitplatforms-&-analysis/MegaBOLT), which is integrated into the ZBOLT platform. ZBOLT incorporates the MegaBOLT pipeline and is optimized for population-based whole-genome sequencing (WGS) analysis. This includes calling both germline and somatic mutations, whole exome sequencing (WES), and targeted region sequencing.
 
 All GVCF files from each sample are merged using DPGT (v1.4.2) into a multi-sample VCF file. Following this, variants are filtered based on the criteria in line with best practices from the Genome Analysis Toolkit (GATK).
+
+
+## Tools Used
+
+| Step | Tool | Purpose |
+|------|------|---------|
+| Alignment | BWA-MEM | Map reads to reference |
+| Variant calling | ZBOLT | Per-sample GVCF generation |
+| Joint genotyping | DPGT | Multi-sample variant calling |
+| Filtering | GATK | Variant quality control |
+| Population analysis | PLINK / R | PCA, Fst, Pi |
+| Visualization | ggplot2 | Publication-ready figures |
+
+## Scripts
+
+All scripts are available in the `scripts/` directory:
+
+
+## Key Results
+- PCA plot showing clear population structure
+- Genome-wide nucleotide diversity (Pi) per population
